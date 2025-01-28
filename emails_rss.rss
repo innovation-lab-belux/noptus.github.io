@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>My Blog</title>
+    <link>https://www.myblog.com</link>
+    <description>Latest updates from My Blog</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Jan 2025 10:00:00 GMT</lastBuildDate>
+    <pubDate>Tue, 28 Jan 2025 09:00:00 GMT</pubDate>
+
+    <item>
+      <title>caekebeke.liano@gmail.com</title>
+    </item>
+
+
+  </channel>
+</rss>
