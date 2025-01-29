@@ -5,6 +5,7 @@
     <link>https://www.myblog.com</link>
     <description>Latest updates from My Blog</description>
     <language>en-us</language>
+    <generator>python-feedgen</generator>
     <lastBuildDate>Tue, 28 Jan 2025 10:00:00 GMT</lastBuildDate>
     <pubDate>Tue, 28 Jan 2025 09:00:00 GMT</pubDate>
 
