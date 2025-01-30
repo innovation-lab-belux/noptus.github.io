@@ -42,6 +42,7 @@ TOKEN_URI = "https://oauth2.googleapis.com/token"
 AUTH_PROVIDER_CERT_URL = "https://www.googleapis.com/oauth2/v1/certs"
 CLIENT_CERT_URL = "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-igpbe%40eusummit2025.iam.gserviceaccount.com"
 UNIVERSE_DOMAIN = "googleapis.com"
+DATABASE_URL = 'https://eusummit2025-default-rtdb.europe-west1.firebasedatabase.app/'
 
 config = {
     "type": TYPE,
@@ -58,7 +59,7 @@ config = {
 }
 
 cred = credentials.Certificate(config)
-app1 = firebase_admin.initialize_app(cred, {'databaseURL': 'https://eusummit2025-default-rtdb.europe-west1.firebasedatabase.app/'})
+app1 = firebase_admin.initialize_app(cred, {'databaseURL': DATABASE_URL})
 
 db = firestore.client()
 
