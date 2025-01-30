@@ -23,10 +23,12 @@ db = firestore.client()
 
 def get_emails():
     emails = []
-    sales_ref = db.collection("guests")
+    sales_ref = db.collection("emails")
     docs = sales_ref.get()
-    """ for doc in docs:
-        emails.append(doc.to_dict()['']) """
+    for doc in docs:
+        data = doc.to_dict()
+        if 'mail' in data:  # Ensure 'email' key exists
+            emails.append(data['mail'])
     
     return emails
 

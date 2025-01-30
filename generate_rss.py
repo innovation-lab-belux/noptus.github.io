@@ -14,9 +14,9 @@ def generate_rss(email_addresses):
     rss_feed = fg.rss_str(pretty=True)
     return rss_feed
 
-if __name__ == "__main__":
+""" if __name__ == "__main__":
     # Example email addresses (replace with actual retrieval from Firestore)
-    email_addresses = ["example1@example.com", "example2@example.com"]
+    email_addresses = 
     
     rss_feed = generate_rss(email_addresses)
-    print("Generated RSS feed:", rss_feed)
+    print("Generated RSS feed:", rss_feed) """
