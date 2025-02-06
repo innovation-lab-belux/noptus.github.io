@@ -5,9 +5,9 @@ import time
 import os
 
 def push_to_github():
-    os.system('git add emails_rss.rss')
-    os.system('git commit -m "Update RSS feed"')
-    os.system('git push origin main')
+    subprocess.run(['git', 'add', 'emails_rss.rss'])
+    subprocess.run(['git', 'commit', '-m', 'Update RSS feed'])
+    subprocess.run(['git', 'push', 'origin', 'main'])
 
 if __name__ == "__main__":
     while True:
