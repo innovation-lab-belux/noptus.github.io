@@ -12,6 +12,7 @@ def generate_rss(email_addresses):
         fe.title(email)
 
     rss_feed = fg.rss_str(pretty=True)
+    alert("test")
     return rss_feed
 
 if __name__ == "__main__":
