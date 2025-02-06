@@ -2,15 +2,24 @@ import fetch_emails
 import generate_rss
 import subprocess
 import time
-import os
+import logging
+
+logging.basicConfig(level=logging.INFO)
 
 def push_to_github():
     try:
+        logging.info("Adding emails_rss.rss to Git")
         subprocess.run(['git', 'add', 'emails_rss.rss'], check=True)
+        
+        logging.info("Committing changes")
         subprocess.run(['git', 'commit', '-m', 'Update RSS feed'], check=True)
+        
+        logging.info("Pushing to GitHub")
         subprocess.run(['git', 'push', 'origin', 'main'], check=True)
+        
+        logging.info("Successfully pushed to GitHub")
     except subprocess.CalledProcessError as e:
-        print(f"An error occurred while pushing to GitHub: {e}")
+        logging.error(f"An error occurred while pushing to GitHub: {e}")
 
 if __name__ == "__main__":
     while True:
