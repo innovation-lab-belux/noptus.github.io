@@ -5,9 +5,12 @@ import time
 import os
 
 def push_to_github():
-    subprocess.run(['git', 'add', 'emails_rss.rss'])
-    subprocess.run(['git', 'commit', '-m', 'Update RSS feed'])
-    subprocess.run(['git', 'push', 'origin', 'main'])
+    try:
+        subprocess.run(['git', 'add', 'emails_rss.rss'], check=True)
+        subprocess.run(['git', 'commit', '-m', 'Update RSS feed'], check=True)
+        subprocess.run(['git', 'push', 'origin', 'main'], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"An error occurred while pushing to GitHub: {e}")
 
 if __name__ == "__main__":
     while True:
